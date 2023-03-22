@@ -84,12 +84,13 @@ template:
 
 To select your pods for library injection, annotate them with the following, corresponding to your application language, in your pod spec:
 
-| Language   | Pod annotation                                              |
-|------------|-------------------------------------------------------------|
-| Java       | `admission.datadoghq.com/java-lib.version: "<lib-version>"`   |
-| JavaScript | `admission.datadoghq.com/js-lib.version: "<lib-version>"`     |
-| Python     | `admission.datadoghq.com/python-lib.version: "<lib-version>"` |
-| .NET       | `admission.datadoghq.com/dotnet-lib.version: "<lib-version>"` |
+| Language                              | Pod annotation                                                     |
+|---------------------------------------|--------------------------------------------------------------------|
+| Java                                  | `admission.datadoghq.com/java-lib.version: "<lib-version>"`        |
+| JavaScript                            | `admission.datadoghq.com/js-lib.version: "<lib-version>"`          |
+| Python                                | `admission.datadoghq.com/python-lib.version: "<lib-version>"`      |
+| .NET (glibc-based Linux distribution) | `admission.datadoghq.com/dotnet-lib.version: "<lib-version>"`      |
+| .NET (musl-based Linux distribution)  | `admission.datadoghq.com/dotnet-lib.version: "<lib-version>-musl"` |
 
 The available library versions are listed in each container registry, as well as in the tracer source repositories for each language:
 - [Java][16]
